@@ -1,7 +1,8 @@
 import React from 'react'
 function ProductCard(props){
 
-
+//   console.log(products.id)
+// console.log(product)h
     return(
      <>
    

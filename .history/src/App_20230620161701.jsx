@@ -33,7 +33,7 @@ useEffect(()=>{
     <Route path="/"/>
     <Route path="/products" element={<ProductList products ={products}/>}/>
 
-    <Route path="/products/:id" element={<ProductCard products = {products}/>}/>
+    {/* <Route path="/products/:id" element={<ProductCard products = {products}/>}/> */}
 
   </Routes>
     </>
