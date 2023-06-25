@@ -5,21 +5,28 @@ const  AddProduct = ()=>{
   const [image,setImage]  = useState(null)
   const handleSubmit =  (event)=>{
     event.preventDefault();
+    const productName   = event.target[0].value 
+    const productPrice   = event.target[1].value 
+    const  productDes  =  event.target[2].value
+    const image  =  event.files[0]
+
+    console.log(productDes)
+    console.log(productName)
+    console.log(productPrice)
+    console.log(image)
  
-    console.log(event.target[0].value)
-    console.log(event.target[1].value)
-    console.log(event.target[2].value)
-    console.log(event.target[3].value)
-    console.log(event.target[4].value)
-    console.log(event.target[5].value)
+    
+
    }
 
     return(
-        <div  className="bg-gray-900 mt-0  max-w-sm text-black  min-h-screen flex flex-col lg:flex-row lg:max-w-full 2xl:max-w-full max-w-sm mx-auto justify-center items-center  shadow-lg rounded-lg  overflow-hidden">
+        <div  className="bg-gray-900 mt-0 sm:max-w-md  md: max-w-lg max-w-sm text-black  min-h-screen flex flex-col lg:flex-row lg:max-w-full 2xl:max-w-full max-w-sm mx-auto justify-center items-center  shadow-lg rounded-lg  overflow-hidden">
           <div className="w-96 rounded-lg mx-auto  bg-red-900  m-5 h-80 p-10  ">
            <img src= {reactsvg} className="w-full "  alt="missing-product-image"/>
+          <h1 className="text-2xl text-white text-bold mt-3 ">Manage Products Easy</h1>
           </div>
-          <div className="  m-10 rounded-lg bg-red-100 mx-auto mx-auto mx-auto">
+          <p className="p-5 text-gray-100 ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus temporibus cupiditate iste quis deleniti? Commodi vel nemo omnis nisi facere, totam amet esse debitis, itaque excepturi illum atque iure fuga?</p>
+               <div className="  m-10 rounded-lg bg-gray-100 mx-auto mx-auto mx-auto">
           <form className="space-y-3 mx-auto p-5 " onSubmit={handleSubmit}>
           
            <input type="text"placeholder=" Product Name" className="w-full rounded-lg h-11  pl-3"/>
@@ -33,7 +40,7 @@ const  AddProduct = ()=>{
               setImage(event.target.files[0])
              }}/>
            </div>
-             <input type="submit"  className = "rounded-lg bg-orange-400 p-3 h-10 "value="Add Product" />
+             <input type="submit"  className = "rounded-lg bg-red-900 p-3 text-gray-100 h-10 "value="Add Product" />
           </form>
           </div>
      
